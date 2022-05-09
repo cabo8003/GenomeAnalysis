@@ -22,12 +22,12 @@ bampath=/home/cabo8003/Project/GenomeAnalysis/analysis/transcriptome_assembly/sa
 genpath=/home/cabo8003/Project/GenomeAnalysis/analysis/genome_assembly/pilon_correction
 
 #Command
-braker.pl --species=durio_zibethinus1 --genome=$genpath/pilon_corrected_assembly_scaffold_06_220412.fasta.masked \
+braker.pl --species=durio_zibethinus --genome=$genpath/pilon_corrected_assembly_scaffold_06_220412.fasta.masked \
 	--bam=$bampath/STAR_output_SRR6040092_scaffold_06.bam,$bampath/STAR_output_SRR6040093_scaffold_06.bam,\
 	$bampath/STAR_output_SRR6040094_scaffold_06.bam,$bampath/STAR_output_SRR6040095_scaffold_06.bam,\
 	$bampath/STAR_output_SRR6040096_scaffold_06.bam,$bampath/STAR_output_SRR6040097_scaffold_06.bam,\
 	$bampath/STAR_output_SRR6156066_scaffold_06.bam,$bampath/STAR_output_SRR6156067_scaffold_06.bam,\
-	$bampath/STAR_output_SRR6156069_scaffold_06.bam --cores=4 --softmasking \
+	$bampath/STAR_output_SRR6156069_scaffold_06.bam --cores=4 --softmasking --gff3 \
 	--AUGUSTUS_CONFIG_PATH=/home/cabo8003/Project/GenomeAnalysis/code/annotation/augustus_config \
 	--AUGUSTUS_BIN_PATH=/sw/bioinfo/augustus/3.4.0/snowy/bin \
 	--AUGUSTUS_SCRIPTS_PATH=/sw/bioinfo/augustus/3.4.0/snowy/scripts \
